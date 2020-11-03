@@ -3,6 +3,7 @@ package com.flipkart.steps;
 import org.openqa.selenium.Keys;
 
 import com.flipkart.pom.ProductPom;
+import com.flipkart.utils.CaptureScreenshot;
 import com.flipkart.utils.Driver;
 import com.flipkart.utils.Sleep;
 
@@ -79,8 +80,7 @@ public class ProductSteps {
 	@Then("^Capture screenshot of product page$")
 	public void capture_screenshot_of_product_page() throws Throwable {
 
-		System.out.println("Inside capture_screenshot_of_product_page()");
-		
+		System.out.println("SCreenshot captured in sendProductHeadline()");
 		
 	}
 }

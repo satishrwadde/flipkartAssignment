@@ -18,7 +18,7 @@ public class Hooks {
 	private String url="https://www.flipkart.com";
 	private ProductPom prodPom = null;
 	private Utils utils=null;
-	
+	private CaptureScreenshot captureScreenshot = null;
 	public Hooks() {
 		
 	}
@@ -33,6 +33,7 @@ public class Hooks {
 	  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	  prodPom=new ProductPom(driver);
 	  utils = new Utils(driver);
+	  captureScreenshot = new CaptureScreenshot(driver);
   }
 
   

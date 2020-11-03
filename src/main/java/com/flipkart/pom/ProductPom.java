@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.flipkart.utils.CaptureScreenshot;
 import com.flipkart.utils.Sleep;
 
 public class ProductPom {
@@ -109,6 +110,10 @@ public class ProductPom {
 		System.out.println("productHeadElement :>"+ productHeadElement);
 		String headline = productHeadElement.getText();
 		System.out.println("Product Headline :>>"+headline);
+		
+		//capture screenshot of product details page
+		CaptureScreenshot.screenshot();
+		
 		driver.switchTo().window(parentWindow);
 		
 		return headline;
