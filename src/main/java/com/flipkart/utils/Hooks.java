@@ -19,6 +19,9 @@ public class Hooks {
 	private ProductPom prodPom = null;
 	private Utils utils=null;
 	private CaptureScreenshot captureScreenshot = null;
+//	private WaitTypes waitTypes = null;
+	
+	
 	public Hooks() {
 		
 	}
@@ -34,6 +37,7 @@ public class Hooks {
 	  prodPom=new ProductPom(driver);
 	  utils = new Utils(driver);
 	  captureScreenshot = new CaptureScreenshot(driver);
+//	  waitTypes = new WaitTypes(driver);
   }
 
   
