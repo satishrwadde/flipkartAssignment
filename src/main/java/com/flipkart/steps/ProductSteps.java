@@ -6,6 +6,7 @@ import com.flipkart.pom.ProductPom;
 import com.flipkart.utils.CaptureScreenshot;
 import com.flipkart.utils.Driver;
 import com.flipkart.utils.Sleep;
+import com.flipkart.utils.WaitTypes;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -13,6 +14,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class ProductSteps {
+	
+	private WaitTypes waitTypes =null; 
 
 	@Given("^Launch webbrowser and then flipkart website$")
 	public void launch_webbrowser_and_then_flipkart_website() throws Throwable {

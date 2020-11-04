@@ -14,7 +14,10 @@ Feature: Flipkart Feature
     And Capture screenshot of product page
 
     Examples: 
-      | idealFor | watchBrand | minPrice | sortBy      |
-      | Men      | Fossil     |    10000 | High to Low |
-      | Women    | Titan      |      500 | Low to High |
-      | Boys     | Maxima     |      500 | Popularity  |
+      | idealFor | watchBrand | minPrice | sortBy       |
+      | Men      | Fossil     |    10000 | High to Low  |
+      | Women    | Titan      |      500 | Low to High  |
+      | Boys     | Maxima     |      500 | Popularity   |
+      | Men      | Casio      |     5000 | Newest First |
+      | Women    | Maxima     |     1000 | Popularity   |
+      | Boys     | Fossil     |      500 | Low to High   |

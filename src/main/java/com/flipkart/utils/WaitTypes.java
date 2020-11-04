@@ -1,6 +1,5 @@
 package com.flipkart.utils;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,11 +15,11 @@ public class WaitTypes {
 		this.driver=driver;
 	}
 	
-	public WebElement clickWhenReady(By locator) {
+	public WebElement clickWhenReady(WebElement element) {
 		
 		try {
 			WebDriverWait wait= new WebDriverWait(driver, maxTimeOut);
-			return wait.until(ExpectedConditions.elementToBeClickable(locator));
+			return wait.until(ExpectedConditions.elementToBeClickable(element));
 		} catch (Exception e) {
 
 			e.printStackTrace();
@@ -28,27 +27,14 @@ public class WaitTypes {
 		return null;
 	}
 	
-	public boolean isElementDisplayed(By locator) {
+	public boolean isElementDisplayed(WebElement element) {
 		
 		 
-		if(driver.findElement(locator).isDisplayed())
+		if(element.isDisplayed())
 			return true;
 		 
 		 else 
 			 return false;
-	}
-
-	public WebElement elementVisible(By locator) {
-		
-		try {
-			WebDriverWait wait= new WebDriverWait(driver, maxTimeOut);
-			return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
-		
-		return null;
 	}
 
 }
